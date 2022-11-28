@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--For PLugins-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body>
+
+    <nav>
+        <header class="p-3 bg-white text-black">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+                        <img src="icons/Mato.svg" width="50%">
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2  justify-content-center">
+                        <li><a href="index.html" class="nav-link px-4 fw-bold text-black">Home</a></li>
+                        <li><a href="#shop" class="nav-link px-4 fw-bold text-black">Shop</a></li>
+                        <li><a href="#contact" class="nav-link px-4 fw-bold text-black">Contact Us</a></li>
+                        <li><a href="cart.html" class="nav-link px-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                          </svg></a></li> 
+                        
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark text-black bg-light"
+                            placeholder="Search..." aria-label="Search">
+                    </form>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-warning me-2" data-toggle="modal"
+                            data-target="#myModal2">Login</button>
+                        <button type="button" class="btn btn-warning"data-toggle="modal"
+                        data-target="#myModal1">Sign-up</button>
+
+                    </div>
+                </div>
+            </div>
+                <!--Modal1-->
+                <div class="modal fade" id="myModal1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <section class="vh-100">
+                        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                          <div class="container h-100">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                                <div class="card" style="border-radius: 15px;">
+                                  <div class="card-body p-5">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                                    <div class="model-content">
+                                    <form>
+                                     
+                                      <div class="form-outline mb-4">
+                                        <input type="text" id="Name" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                                      </div>
+                      
+                                      <div class="form-outline mb-4">
+                                        <input type="email" id="Email" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                      </div>
+                      
+                                      <div class="form-outline mb-4">
+                                        <input type="password" id="Password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                      </div>
+                      
+                                      <div class="form-outline mb-4">
+                                        <input type="password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                                      </div>
+                      
+                                      <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                                        <label class="form-check-label" for="form2Example3g">
+                                          I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                        </label>
+                                      </div>
+                      
+                                      <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                       
+                                      </div>
+                      
+                                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                                          class="fw-bold text-body" data-toggle="modal"
+                                          data-target="#myModal2"><u>Login here</u></a></p>
+                      
+                                    </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                       
+                    </div>
+                  </div>
+
+                  <!--Modal2-->
+                <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <section class="vh-100">
+                        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                          <div class="container h-100">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                                <div class="card" style="border-radius: 15px;">
+                                  <div class="card-body p-5">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h2 class="text-uppercase text-center mb-5">login</h2>
+                                    <div class="model-content">
+                                    <form>
+                                     
+                      
+                                      <div class="form-outline mb-4">
+                                        <input type="email" id="Email" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                      </div>
+                      
+                                      <div class="form-outline mb-4">
+                                        <input type="password" id="Password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                      </div>
+                                    <p><a>Forgot password</a></p>
+                      
+                                      <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Login</button>
+                                       
+                                      </div>
+                      
+                                      <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="#!"
+                                          class="fw-bold text-body"><u>Signup here</u></a></p>
+                                          
+                      
+                                    </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                       
+                    </div>
+                  </div>
+
+                      
+        </header>
+    </nav>
+
+<section class="h-100" style="background-color: #eee;">
+    <div class="container h-100 py-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-10">
+  
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+            <div>
+              <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!" class="text-body">price <i
+                    class="fas fa-angle-down mt-1"></i></a></p>
+            </div>
+          </div>
+  
+          <div class="card rounded-3 mb-4">
+            <div class="card-body p-4">
+              <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-md-2 col-lg-2 col-xl-2">
+                  <img
+                    src="icons/Image 3.svg" width="140px" height="72px"
+                    class="img-fluid rounded-3" alt="Fertilizer">
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                  <p class="lead fw-normal mb-2">Fertilizer</p>
+                  <p><span class="text-muted">Weight: </span>300gm</p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+  
+                  <input id="form1" min="0" name="quantity" value="2" type="number"
+                    class="form-control form-control-sm" />
+  
+                  <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                  <h5 class="mb-0"><Rs class="560"></Rs>560.00</h5>
+                </div>
+                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                  <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          
+  
+          
+  
+          <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="p-5 bg-light" id="contact">
+    <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Useful links</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Delivery Information</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Customer care</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Brands</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Get Certificate</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Specials</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Affiliate</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Newsletter</a></li>
+            </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+            <h5>Products</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">History</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Returns</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sidemaps</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg></a></li>
+        </ul>
+    </div>
+</footer>
+    
+</body>
+</html>
